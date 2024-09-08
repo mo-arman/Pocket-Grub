@@ -1,0 +1,41 @@
+{
+  "name": "pocket-grub",
+  "version": "1.0.0",
+  "description": "\"create The Project Pocket-Grub Using React Js\"",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/mo-arman/Pocket-Grub.git)"
+  },
+  "keywords": [
+    "\"Food",
+    "App",
+    "Food",
+    "Service",
+    "F&D",
+    "Food",
+    "Villa",
+    "Deliveroo",
+    "TastyMeal\""
+  ],
+  "author": "\"Mohammad Arman\"",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.45",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserlist": [
+    "last 2 version chrome",
+    "last 2 version firefox"
+  ]
+}
