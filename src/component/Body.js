@@ -38,8 +38,6 @@ const Body = () => {
     <ShimmerCard />
   ) : (
     <div className="body">
-      {/* here write the filter function */}
-      <div className="filter">
       <div className="input">
         <input
           className="input-search"
@@ -65,6 +63,9 @@ const Body = () => {
           Search
         </button>
       </div>
+      {/* here write the filter function */}
+      <div className="filter">
+      
         <button
           className="filter-btn"
           onClick={() => {

@@ -289,4 +289,20 @@ Push code to Github (Theory as well as code)
  - Remove the mockdata add Live Api Data
  - Add Login Logout Button in Header using useState
  - Add Search Bar in Body Component and Filtered The Restaurants Name 
- 
+
+# Finding The Path
+ - Create Routing Functionality in Our Food-App
+ - Install Router-Dom => (npm i react-router-dom) this is the lates routing function in 16.0 giving the Router-Dom Library 
+ - CreateBrowserRouter => Firstly Have gone to App.js File And Import The CreateBrowserRouter in reac-router-dom 
+  - import {CreateBrowserRouter} from react-router-dom;
+ - Then create the createBrowserRouter object like const appRouter = createBrowserRouter = ([]) the write the inside object path and element 
+ - Create About.js Component and import in App.js and put inside the CreateBrowserRouter
+ - Create Contact.js Component and import in App.js and put inside the CreateBrowserRouter
+ - Create Cart.js Component and import in App.js and put inside the CreateBrowserRouter
+ - Create Own Error Page and import {useRouterError} from react-router-dom and put the Error component and use it . It's giving Api use   Api and made Beautiful Error page
+ - root.rounder(<RouterProvider appRouter=<AppLayout/>) import RouterProvider in react-router-dom;
+ - Build children:[] path the Build Functionality if route the contact page so my header is not showing this problem resolve using by Outlet import Outlet react-router-dom basically it's like a tunnel if route any page my header shown every page use by Outlet;
+
+- use Link tag if using Link tag and route the other page my header not render only route the page not again rendering header therefore using Link tag and Avoid The <a> tag;
+-  Create RestuarantMenu.js component and import in App.js and put inside the createBrowserRouter inside the children and make the dynamic path like "/restaurants/:resId" => resId id dynamic if click other Restaurant my resId change and shown the details for Restaurants;
+- fetch MenuPageApi inside the RestaurantCard using useEffect Hook  
