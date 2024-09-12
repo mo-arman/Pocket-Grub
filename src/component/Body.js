@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import ShimmerCard from "./ShimmerCard";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // State Variable
@@ -65,7 +66,6 @@ const Body = () => {
       </div>
       {/* here write the filter function */}
       <div className="filter">
-      
         <button
           className="filter-btn"
           onClick={() => {
@@ -82,7 +82,12 @@ const Body = () => {
 
       <div className="res-container">
         {filteredRestaurant.map((restaurants) => (
-          <RestaurantCard key={restaurants?.info?.id} resData={restaurants} />
+          <Link
+            key={restaurants?.info?.id}
+            to={"restaurants/" + restaurants?.info?.id}
+          >
+            <RestaurantCard resData={restaurants} />
+          </Link>
         ))}
         {/* {listofrestaurants.map((restaurants) => (
           <RestaurantCard key={restaurants?.info?.id} resData={restaurants} />

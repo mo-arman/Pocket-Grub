@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import ShimmerCard from "./ShimmerCard";
+import { useParams } from "react-router-dom";
+import { RESID_LINK } from "../utils/constant";
 
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
+  const { resId } = useParams();
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=27.5717263&lng=80.6576623&restaurantId=164447&catalog_qa=undefined&submitAction=ENTER"
-    );
+    const data = await fetch(RESID_LINK + resId);
 
     const json = await data.json();
     console.log(json);
@@ -23,9 +24,8 @@ const RestaurantMenu = () => {
     resInfo?.cards[2]?.card?.card?.info;
 
   const { itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-      ?.card;
-      console.log(itemCards);
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+  console.log(itemCards);
   return (
     <div className="menu">
       <h1>{name}</h1>
@@ -36,12 +36,13 @@ const RestaurantMenu = () => {
       <h3>{locality}</h3>
       <h2>Menu :</h2>
       <ul>
-      <li>{itemCards[2].card.info.name}</li>
-      </ul>
-    
-      <ul>
-        <li>Biryani</li>
-        <li>Wada paw</li>
+        {itemCards.map((item) => (
+          <li key={item.card.info.id}>
+            {item.card.info.name} - {"RS"} -{" "}
+            {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
+          </li>
+        ))}
+        {/* <li>{itemCards[3]?.card?.info?.name}</li> */}
       </ul>
     </div>
   );
