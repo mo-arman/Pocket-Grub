@@ -306,3 +306,5 @@ Push code to Github (Theory as well as code)
 - use Link tag if using Link tag and route the other page my header not render only route the page not again rendering header therefore using Link tag and Avoid The <a> tag;
 -  Create RestuarantMenu.js component and import in App.js and put inside the createBrowserRouter inside the children and make the dynamic path like "/restaurants/:resId" => resId id dynamic if click other Restaurant my resId change and shown the details for Restaurants;
 - fetch MenuPageApi inside the RestaurantCard using useEffect Hook  
+
+# Class Based Component and Fuctional Component 
