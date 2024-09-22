@@ -310,5 +310,6 @@ Push code to Github (Theory as well as code)
 # Class Based Component and Fuctional Component 
  - userClass.js
  - user.js
+ - userClass.js
  
  
