@@ -311,5 +311,8 @@ Push code to Github (Theory as well as code)
  => Two way define the component
   - Class Based Component
   - Fuctional Component
+
+# Build The Dynamic Component
+ - Dynamic RestaurantCard
  
  
