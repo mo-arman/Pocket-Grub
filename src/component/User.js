@@ -4,7 +4,9 @@ import { useState } from "react";
 const User = ({name,location}) => {
     // create state variable
     const [count,setCount] = useState(0);
+    console.log("user constructor")
   return (
+    
     <div className="about">
       <h1>Name:{name}</h1>
       <h2>Location:{location}</h2>
