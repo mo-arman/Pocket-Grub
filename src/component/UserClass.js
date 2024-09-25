@@ -5,22 +5,32 @@ class UserClass extends React.Component {
     super(props);
 
     // create state varibale in class Based Component
-    // this state is big object 
+    // this state is big object
     this.state = {
-        count:0,
-        count2:1,
-    }
+      count: 0,
+      count2: 1,
+    };
     console.log(props);
   }
   render() {
-    const {name,location} = this.props;
-    const {count,count2} = this.state;
+    const { name, location } = this.props;
+    const { count, count2 } = this.state;
     return (
-      <div>
+      <div className="about">
         <h1>Name:{name}</h1>
         <h2>Location:{location}</h2>
         <h3>Class Based Component</h3>
         <h2>Count:{count}</h2>
+        <button
+          onClick={() => {
+            // Never update state variable Directly
+            this.setState({
+              count: this.state.count + 1,
+            });
+          }}
+        >
+          Count Increase
+        </button>
         <h2>Count:{count2}</h2>
       </div>
     );
