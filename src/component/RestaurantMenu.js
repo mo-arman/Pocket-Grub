@@ -4,8 +4,10 @@ import { useParams } from "react-router-dom";
 import { RESID_LINK } from "../utils/constant";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
+  // const [resInfo, setResInfo] = useState(null);
   const { resId } = useParams();
+
+  const resInfo = useRestaurantMenu(resId);
   useEffect(() => {
     fetchData();
   }, []);
