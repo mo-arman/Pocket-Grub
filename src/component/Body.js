@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import ShimmerCard from "./ShimmerCard";
@@ -11,6 +11,7 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   useEffect(() => {
     fetchData();
     console.log("use Effect called");
@@ -32,16 +33,18 @@ const Body = () => {
     setFilteredRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-
   };
   const onlineStatus = useOnlineStatus();
 
-  if(onlineStatus == false) return <h1>Looks like check your internetConnection</h1>
-  
-   if(listOfRestaurants.length == 0){
-    return <ShimmerCard/>
-   }
-  return (
+  if (onlineStatus == false)
+    return <h1>Looks like check your internetConnection</h1>;
+
+  //  if(listOfRestaurants.length == 0){
+  //   return <ShimmerCard/>
+  //  }
+  return listOfRestaurants.length === 0 ? (
+    <ShimmerCard />
+  ) : (
     <div className="body">
       <div className="input">
         <input
@@ -90,7 +93,11 @@ const Body = () => {
             key={restaurants?.info?.id}
             to={"restaurants/" + restaurants?.info?.id}
           >
-            <RestaurantCard resData={restaurants} />
+            {restaurants.info.Promoted ? (
+              <RestaurantCard resData={restaurants} />
+            ) : (
+              <RestaurantCardPromoted resData={restaurants} />
+            )}
           </Link>
         ))}
         {/* {listofrestaurants.map((restaurants) => (

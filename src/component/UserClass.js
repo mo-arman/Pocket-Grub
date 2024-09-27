@@ -38,7 +38,7 @@ class UserClass extends React.Component {
     
     return (
       <div className="about">
-        <img src={this.state.UserInfo.avatar_url} />
+        <img className="img" src={this.state.UserInfo.avatar_url} />
         <h1>Name:{this.state.UserInfo.name}</h1>
         <h2>Location:{this.state.UserInfo.location}</h2>
         <h2>Bio:{this.state.UserInfo.bio}</h2>
