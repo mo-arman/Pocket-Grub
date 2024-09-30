@@ -322,3 +322,4 @@ Push code to Github (Theory as well as code)
  - create the postcssrc and put the configure then understand the parcel
  - Tailwindcss is a frame of css we will easy to coder and developer and directly use in classname 
  - postcss means parcel understand the tailwindcss is just like a transpiler postcss therefore we install the postcss and put configure file in postcssrc
+ - put CSS file only 3 line configure 
