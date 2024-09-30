@@ -315,5 +315,9 @@ Push code to Github (Theory as well as code)
 # Build The Dynamic Component
  - Dynamic RestaurantCard
  
+# Use TailwindCSS in our project
+ - first step => go to tailwindcss website
+ - secand step=> select frame i select Parcel
+ - install => npm i tailwindcss postcss , npx i postcss configure file
+ - create the postcssrc and put the configure then understand the parcel
  
-np
