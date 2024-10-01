@@ -1,16 +1,20 @@
-.header{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .header{
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
     
 
 }
-.logo{
+/* .logo{
     /* position: relative;
     bottom: 15px; */
-    width: 130px;
-}
-
+    /* width: 130px; */
+/* } */
+/* 
 .nav-items>ul{
     display: flex;
     list-style-type: none;
@@ -37,7 +41,7 @@
     margin: 5px;
     width: 200px;
     /* height: 300px; */
-    border-radius: 5px;
+    /* border-radius: 5px;
     background-color: #f0f0f0;
     
     
@@ -107,4 +111,4 @@
 .about{
     height: auto;
     border: 1px solid black;
-}
+/* } */ 
