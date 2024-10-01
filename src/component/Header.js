@@ -10,23 +10,25 @@ const Header = () => {
   // let btnName = "Login";
   // let btnName = "Login";
   return (
-    <div className="header">
-      <div className="logo-conatiner">
-        <img className="logo" src={LOGO} alt="LOGO_URL" />
+    <div className="flex  justify-between bg-pink-200 h-28 shadow-xl mb-">
+      <div className="">
+        <img className="w-52 absolute top-[-7%]" src={LOGO} alt="LOGO_URL" />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>
+      <div className="flex items-center">
+        <div className="">
+        <ul className="flex p-4 m-4">
+          <li className="px-10 font-bold text-2xl">
             Online Status: {onlineStatus ? "🌍" : "🐍"}
           </li>
-          <li>
+          <li className="px-4 font-bold text-xl  hover:bg-pink-400 rounded-lg">
             <Link to="/">Home</Link>
             </li>
-          <li> <Link to="/contact">Contact Us</Link></li>
-          <li> <Link to="/about">About Us</Link></li>
-          <li> <Link to="/cart">Cart</Link></li>
+          <li className="px-4 font-bold text-xl hover:bg-pink-400 rounded-lg"> <Link to="/contact">Contact Us</Link></li>
+          <li className="px-4 font-bold text-xl  hover:bg-pink-400 rounded-lg"> <Link to="/about">About Us</Link></li>
+          <li className="px-4 font-bold text-xl  hover:bg-pink-400 rounded-lg"> <Link to="/cart">Cart</Link></li>
+          <div className="px-4">
           <button
-            className="btn"
+            className="bg-green-300 px-2 py-2 rounded-lg pt-1 font-bold hover:bg-pink-400"
             onClick={() => {
               // btnName = "Logout" ? btnName = "Logout" : btnName = "Login";
               // console.log(btnName);
@@ -38,9 +40,12 @@ const Header = () => {
           >
             {btnNameReact}
           </button>
+          </div>
         </ul>
+        </div>
       </div>
     </div>
+   
   );
 };
 
