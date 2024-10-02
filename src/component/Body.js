@@ -45,65 +45,67 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <ShimmerCard />
   ) : (
-    <div className="body">
-      <div className="input">
-        <input
-          className="input-search"
-          type="text"
-          placeholder="search the Restaurants"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-        <button
-          className="ip-btn"
-          onClick={() => {
-            // write the function of filtered logic here
-            // cards filtered ui
-            console.log(searchText);
+    <div className="bg-teal-300">
+      <div className="ml-24 ">
+        <div className="py-2">
+          <input
+            className="border border-blue-600 rounded-lg p-2 pr-10 text-pink-600 "
+            type="text"
+            placeholder="search the Restaurants"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+            className="px-3 py-2 rounded-lg bg-green-200 m-3 hover:bg-pink-500"
+            onClick={() => {
+              // write the function of filtered logic here
+              // cards filtered ui
+              console.log(searchText);
 
-            const filteredRestaurant = listOfRestaurants.filter((res) =>
-              res.info.name.toLowerCase().includes(searchText.toLowerCase())
-            );
-            // setListOfRestaurants(filteredList);
-            setFilteredRestaurant(filteredRestaurant);
-          }}
-        >
-          Search
-        </button>
-      </div>
-      {/* here write the filter function */}
-      <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filterList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setListOfRestaurants(filterList);
-            // console.log(listOfRestaurants);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
-      </div>
-
-      <div className="res-container">
-        {filteredRestaurant.map((restaurants) => (
-          <Link
-            key={restaurants?.info?.id}
-            to={"restaurants/" + restaurants?.info?.id}
+              const filteredRestaurant = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              // setListOfRestaurants(filteredList);
+              setFilteredRestaurant(filteredRestaurant);
+            }}
           >
-            {restaurants.info.Promoted ? (
-              <RestaurantCard resData={restaurants} />
-            ) : (
-              <RestaurantCardPromoted resData={restaurants} />
-            )}
-          </Link>
-        ))}
-        {/* {listofrestaurants.map((restaurants) => (
+            Search
+          </button>
+        </div>
+        {/* here write the filter function */}
+        <div className="absolute left-[30%] bottom-[76%]">
+          <button
+            className=" px-3 py-2 bg-green-300 rounded-lg hover:bg-green-400"
+            onClick={() => {
+              const filterList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setListOfRestaurants(filterList);
+              // console.log(listOfRestaurants);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
+
+        <div className="flex flex-wrap">
+          {filteredRestaurant.map((restaurants) => (
+            <Link
+              key={restaurants?.info?.id}
+              to={"restaurants/" + restaurants?.info?.id}
+            >
+              {restaurants.info.Promoted ? (
+                <RestaurantCard resData={restaurants} />
+              ) : (
+                <RestaurantCardPromoted resData={restaurants} />
+              )}
+            </Link>
+          ))}
+          {/* {listofrestaurants.map((restaurants) => (
           <RestaurantCard key={restaurants?.info?.id} resData={restaurants} />
         ))} */}
-        {/* <RestaurantCard resData={resList[5]} /> */}
+          {/* <RestaurantCard resData={resList[5]} /> */}
+        </div>
       </div>
     </div>
   );
