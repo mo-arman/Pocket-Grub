@@ -324,3 +324,4 @@ Push code to Github (Theory as well as code)
  - postcss means parcel understand the tailwindcss is just like a transpiler postcss therefore we install the postcss and put configure file in postcssrc
  - put CSS file only 3 line configure 
  - Make The beautiful App
+ - Responsive website
