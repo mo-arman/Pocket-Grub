@@ -325,3 +325,4 @@ Push code to Github (Theory as well as code)
  - put CSS file only 3 line configure 
  - Make The beautiful App
  - Responsive website
+ - Dynamic
