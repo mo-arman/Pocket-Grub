@@ -332,3 +332,4 @@ Push code to Github (Theory as well as code)
  => Grocery.js 
  - lazy loading
  - large file loading slow 
+ - seperate component
