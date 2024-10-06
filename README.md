@@ -333,3 +333,4 @@ Push code to Github (Theory as well as code)
  - lazy loading
  - large file loading slow 
  - seperate component
+ - Add New Functionality
