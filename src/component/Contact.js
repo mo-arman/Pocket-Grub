@@ -81,7 +81,11 @@ const Contact = () => {
          <h1 className=" font-bold font-sans text-lg">Get in Touch </h1>
          <div className="absolute right-[-65px]  w-[200px]"><p className=" font-extralight text-sm mt-4">Nunc erat cursur tellus gravida</p></div>
          </div>
-         <div></div>
+         <div>
+          <div>
+            
+          </div>
+         </div>
          {/* <div className="mt-12  ">
   //           <form>
   //             <label className="absolute left-[10px] font-bold" for="fName">
