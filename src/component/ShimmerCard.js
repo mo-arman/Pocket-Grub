@@ -64,6 +64,10 @@ const ShimmerCard = () => {
           className="w-[230px] shadow-xl h-[300px] m-4 rounded-lg"
           style={{ backgroundColor: "#f0f0f0f0" }}
         ></div>
+         <div
+          className="w-[230px] shadow-xl h-[300px] m-4 rounded-lg"
+          style={{ backgroundColor: "#f0f0f0f0" }}
+        ></div>
       </div>
     </div>
   );
