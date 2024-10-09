@@ -337,3 +337,4 @@ Push code to Github (Theory as well as code)
  - Add new btn
  - Add nav btn
  - route
+ - learn lazyloading
