@@ -334,3 +334,4 @@ Push code to Github (Theory as well as code)
  - large file loading slow 
  - seperate component
  - Add New Functionality
+ - Add new btn
