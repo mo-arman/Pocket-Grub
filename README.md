@@ -338,3 +338,4 @@ Push code to Github (Theory as well as code)
  - Add nav btn
  - route
  - learn lazyloading
+ - component seperate
