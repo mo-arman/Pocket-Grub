@@ -335,3 +335,4 @@ Push code to Github (Theory as well as code)
  - seperate component
  - Add New Functionality
  - Add new btn
+ - Add nav btn
