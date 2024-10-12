@@ -9,6 +9,7 @@ const Error = () => {
       <h2>Unexpected Error</h2>
       <h3>404 Not Found</h3>
       <h3>Please Check the Internet Connection</h3>
+      <div></div>
     </div>
   )
 }
