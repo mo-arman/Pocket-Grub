@@ -340,3 +340,4 @@ Push code to Github (Theory as well as code)
  - learn lazyloading
  - component seperate
  - learn tailwindcss
+ - Add
