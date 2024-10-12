@@ -44,6 +44,7 @@ class UserClass extends React.Component {
         <h2>Bio:{this.state.UserInfo.bio}</h2>
         <h3>Class Based Component</h3>
         <h2>Count:{count}</h2>
+        <h2></h2>
         <button
           onClick={() => {
             // Never update state variable Directly
