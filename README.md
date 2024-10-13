@@ -341,3 +341,6 @@ Push code to Github (Theory as well as code)
  - component seperate
  - learn tailwindcss
  - Add
+
+# TailwindCSS
+ Tailwind CSS is a utility-first CSS framework that allows developers to create custom designs directly in the HTML without having to write custom CSS. Instead of defining custom class names for CSS styles, you use pre-defined utility classes provided by Tailwind to style your components.
