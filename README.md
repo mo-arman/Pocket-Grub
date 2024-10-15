@@ -342,23 +342,6 @@ Push code to Github (Theory as well as code)
  - learn tailwindcss
  - Add
 
-# TailwindCSS
- Tailwind CSS is a utility-first CSS framework that allows developers to create custom designs directly in the HTML without having to write custom CSS. Instead of defining custom class names for CSS styles, you use pre-defined utility classes provided by Tailwind to style your components.
-
- Key Features:
-Utility-First: Tailwind provides low-level utility classes like flex, text-center, bg-blue-500, etc., to style your application.
-Customization: It's highly customizable. You can configure your own design system by adjusting the Tailwind config file (tailwind.config.js), making it easy to adapt to your needs.
-Responsive Design: Tailwind offers a responsive design system out-of-the-box with a mobile-first approach. You can easily apply different styles for different breakpoints using responsive utility variants like md:text-lg or lg:bg-red-400.
-No CSS File Bloat: Since you only use the classes you need, it keeps your final CSS file small and efficient when properly purged.
-
-CSS frameworks are pre-prepared libraries that make web design easier by providing reusable styles, components, and layouts. They help developers and designers avoid writing custom CSS from scratch and speed up the process of creating responsive, visually appealing websites. Here are some of the most popular CSS frameworks:
-
-=> Bootostarp
-=> Bulma
-=> Tailwind CSS
-=> Materialize
-=> Semantic ui
-=> Skeleton
 
 # Router
  => createBrowserRouter
