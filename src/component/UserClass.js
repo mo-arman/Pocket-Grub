@@ -45,6 +45,7 @@ class UserClass extends React.Component {
         <h3>Class Based Component</h3>
         <h2>Count:{count}</h2>
         <h2></h2>
+        <h2></h2>
         <button
           onClick={() => {
             // Never update state variable Directly
